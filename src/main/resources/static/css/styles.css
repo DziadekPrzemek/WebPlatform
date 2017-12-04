@@ -1,0 +1,16 @@
+bory{
+    padding-top: 60px;
+}
+.starter-template{
+    padding: 40px 15 px;
+    text-align: center;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 0px;
+    width: auto;
+}
