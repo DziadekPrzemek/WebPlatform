@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"/>
-
-<body>
 <div th:replace="common/navbar :: common-navbar"/>
-
-
+<body>
+<div class="embed-responsive embed-responsive-16by9" >
+    <iframe class="embed-responsive-item"  th:src="#{homepage.video}"></iframe>
+</div>
 
 
 <!-- Bootstrap core JavaScript
