@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header"/>
+
+<body>
+<div th:replace="common/navbar :: common-navbar"/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+          </div>
+<div id="my-slider" class="carousel slider" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li data-target="#my-slider" data-slide-to="0"></li>
+        <li data-target="#my-slider" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+            <img src="/images/savings.JPG" alt="fruits" class="img-responsive center-block"/>
+        </div>
+        <div class="item" >
+            <img src="/images/investment_process.JPG" alt="fruits" class="img-responsive center-block"/>
+        </div>
+        </div>
+
+    <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+    </div>
+
+</div>
+    </div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/header :: before-body-scripts"/>
+</body>
+</html>

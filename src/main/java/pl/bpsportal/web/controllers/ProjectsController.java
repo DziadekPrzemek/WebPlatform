@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ProjectsController {
-	@RequestMapping("/projects")
-	public String indexController(){
-		return "projects";
+	@RequestMapping("/map")
+	public String map(){
+		return "map/map";
 	}
 }
