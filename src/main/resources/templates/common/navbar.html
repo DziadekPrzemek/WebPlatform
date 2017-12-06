@@ -17,7 +17,7 @@
             </div>
             <div id="navbar1" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#" th:text="#{navbar.homepage}"></a></li>
+                    <li class="active"><a href="/" th:text="#{navbar.homepage}"></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" th:text="#{navbar.menu}"><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -25,11 +25,11 @@
                             <li><a th:href="#{url.navigator}" th:text="#{menu.navigator}"></a></li>
                             <li><a th:href="#{url.cwp}" th:text="#{menu.cwp}"></a></li>
                             <li><a th:href="#{url.osticket}" th:text="#{menu.osTicket}"></a></li>
-                            <li><a href="" th:text="#{menu.calender}"></a></li>
+                            <li><a href="/calendar" th:text="#{menu.calender}"></a></li>
                         </ul>
                     </li>
-                    <li><a href="#" th:text="#{navbar.our.projects}"></a></li>
-                    <li><a href="#" th:text="#{navbar.about}"></a></li>
+                    <li><a href="/map" th:text="#{navbar.our.projects}"></a></li>
+                    <li><a href="/about" th:text="#{navbar.about}"></a></li>
                     <li><a href="#" th:text="#{navbar.contact}"></a></li>
                 </ul>
             </div>
