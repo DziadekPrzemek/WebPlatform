@@ -50,7 +50,7 @@
 .embed-responsive-4by3 {
     padding-bottom: 75%;
 }
-body {
+.index-body {
     margin: 0;
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
@@ -60,5 +60,3 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
-
