@@ -2,11 +2,61 @@
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"/>
 <div th:replace="common/navbar :: common-navbar"/>
-<body class="index-body">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+<div id='jumbotrone-wrapper'>
+    <div className="jumbotron jumbotron-top jumbotron-fluid">
+        <div className="container">
+            <div className="row">
+                <div id='jumbo-siemens-frame-big' className='col-xs-11 col-md-9 col-lg-7 '>
+                    Building Performance &amp; Sustainability
+                </div>
+            </div>
+            <div className="row">
+                <div id='jumbo-siemens-frame-small' className='col-xs-11 col-md-9 col-lg-7 '>
+                    <p>Advantage Operational Center</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="systems-wrapper">
+    <div class="container">
+        <div id="systems-info">
+            <h3 class="header section">Wybierz system do którego chcesz się zalogować:</h3>
+            <div class="systems">
+                <div class="system">
+                    <a  th:href="#{url.navigator}"> <img class="system-img" src="/images/school.png"/></a>
+                    <p class="lead">Advantage Navigator</p>
+                    </div>
+                <div class="system">
+                    <a  th:href="#{url.cwp}">  <img class="system-img" src="/images/school.png" /></a>
+                    <p class="lead">Customer Web Portal</p>
+                    </div>
+                <div class="system">
+                    <a th:href="#{url.osticket}"><img class="system-img" src="/images/school.png" /></a>
+                    <p class="lead">Zgłoszenie usterki</p>
+                    </div>
+                <div class="system">
+                    <a href="/calendar"><img class="system-img" src="/images/school.png" /></a>
+                    <p class="lead">Kalendarz prac</p>
+                     </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="video-info">
+    <h3 class="header section">Efektywność energetyczna w budynkach użyteczności publicznej</h3>
+
 <div class="embed-responsive embed-responsive-16by9" >
     <iframe class="embed-responsive-item"  th:src="#{homepage.video}"></iframe>
 </div>
-
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

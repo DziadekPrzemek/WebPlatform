@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"/>
+<div th:replace="common/navbar :: common-navbar"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style>
     /* Always set the map height explicitly to define the size of the div
@@ -16,48 +20,44 @@
         padding: 0;
     }
 </style>
-
+<script src="/js/map.js"></script>
 <body>
-<div th:replace="common/navbar :: common-navbar"/>
 
 <div id="map"></div>
-<script>
-    var map;
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 52.03, lng: 19.27},
-            zoom: 6
-        });
-    }
-</script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALBuUkoeYIwx_h1UhC_AqQMZvdKDU8dXM&amp;callback=initMap"
         async="async" defer="defer"></script>
 
+<div id="facts-wrapper">
+    <div class="container">
+        <div id="facts-info">
+            <h3 class="header section" th:text="#{map.asc.statistics}"/>
+            <div class="fakty">
+                <div class="fakt">
+                    <img class="fakt-img" src="/images/school.png"/>
+                    <p class="lead">Zarządzana powierzchnia:</p>
+                    <p class="lead">100 000 m2</p>
+                </div>
+                <div class="fakt">
+                    <img class="fakt-img" src="/images/school.png"/>
+                    <p class="lead">Ilość zarządzanych budynków:</p>
+                    <p class="lead">200</p>
+                </div>
+                <div class="fakt">
+                    <img class="fakt-img" src="/images/dollar.png"/>
+                    <p class="lead">Zaoszczędzone środki:</p>
+                    <p class="lead">2 mln zł</p>
+                </div>
+                <div class="fakt">
+                    <img class="fakt-img" src="/images/dollar.png"/>
+                    <p class="lead">Uniknięta emisja:</p>
+                    <p class="lead">1000 ton CO2</p>
+                </div>
+            </div>
+        </div>
 
-<div class="row">
-
-    <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-        <a class="thumbnail" href="#">
-            <img class="img-responsive" src="http://placehold.it/200x100" alt=""/>
-        </a>
-    </div>
-    <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-        <a class="thumbnail" href="#">
-            <img class="img-responsive" src="http://placehold.it/200x100" alt=""/>
-        </a>
-    </div>
-    <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-        <a class="thumbnail" href="#">
-            <img class="img-responsive" src="http://placehold.it/200x100" alt=""/>
-        </a>
-    </div>
-    <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-        <a class="thumbnail" href="#">
-            <img class="img-responsive" src="http://placehold.it/200x100" alt=""/>
-        </a>
     </div>
 </div>
-
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

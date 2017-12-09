@@ -1,7 +1,9 @@
 
+/* Navbar */
 .starter-template{
     padding: 0px 0 px;
     text-align: center;
+    font-size: 20px;
 }
 
 .navbar-brand {
@@ -23,40 +25,140 @@
 
 .navbar-default { margin : 0 !important; }
 
-/* Video embadded */
-.embed-responsive {
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
+
+/* Index */
+.jumbotron{
+    float: top;
+
 }
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
-    position: absolute;
-    top: 20px;
-    bottom: 0;
-    left: 20px;
-    width: 40%;
-    height: 40%;
-    border: 0;
-}
-.embed-responsive-16by9 {
-    padding-bottom: 56.25%;
-}
-.embed-responsive-4by3 {
-    padding-bottom: 75%;
-}
-.index-body {
-    margin: 0;
-    background-image: url("/images/background.jpg");
+
+#jumbotrone-wrapper {
+    margin-top: 0px;
+    min-height: 500px;
+
+    background-image: url("/images/jumbo.jpg");
     background-repeat: no-repeat;
-    background-position: 0 52px;
+    background-position: bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: absolute;
+    top: 60;
+    width: 100%;
+
+}
+
+#jumbo-siemens-frame-big {
+    height: 128px;
+    width: 600px;
+    font-size: 35px;
+    text-wrap: normal;
+    position: relative;
+    line-height: 110px;
+    vertical-align: middle;
+    left: 100px;
+
+    background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
+    background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    margin-top: 100px;
+    color: white;
+
+
+
+}
+
+#jumbo-siemens-frame-small {
+    height: 64px;
+    width: 600px;
+    position: relative;
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    left: 100px;
+    background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
+    background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    margin-top: 5px;
+    color: white;
+    font-size: 25px;
+}
+
+/*Fakts section */
+
+#facts-wrapper{
+    text-align: center;
+}
+
+.fakty {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+
+
+}
+
+.fakt-img {
+    max-width: 150px;
+    max-height: 100%;
+}
+
+.fakt {
+    text-align: center;
+}
+
+.fakt p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fakt p:nth-child(3){
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/*Systems section */
+#systems-wrapper{
+    padding-top: 500px;
+
+
+}
+#systems-info{
+
+    position: absolute;
+    width: 80%;
+
+
+}
+#systems-info h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    fint-style: bold;
+}
+.systems {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+
+}
+.system-img {
+    max-width: 150px;
+    max-height: 100%;
+}
+
+/*Video embadded*/
+
+#video-info
+{
+
+    margin-top: 350px;
+    text-align: center;
+    font-weight: bold;
 }
