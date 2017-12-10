@@ -171,5 +171,8 @@
 
 #loginform{
 
-    width: 400px;
+    width: 450px;
+}
+.form-group{
+    width: 90%;
 }
