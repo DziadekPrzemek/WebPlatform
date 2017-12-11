@@ -4,6 +4,7 @@
     padding: 0px 0 px;
     text-align: center;
     font-size: 25px;
+
 }
 
 .navbar-nav > li > a {padding-top:20px !important; padding-bottom:20px !important;}
@@ -16,11 +17,14 @@
     height: 150%;
     padding: 2px;
     width: auto;
+    margin-left: 10% !important;
+
 }
 
 .navbar-default {
     background-color: #FFFFFF;
     border-color: #FFFFFF;
+    font-weight: bold;
 }
 
 .navbar-default { margin : 0 !important; }
@@ -40,9 +44,10 @@
     margin-top: 0px;
     min-height: 500px;
 
-    background-image: url("/images/jumbo.jpg");
+    background-image: url("/images/index/index.png");
     background-repeat: no-repeat;
-    background-position: bottom;
+
+    background-position: top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -54,50 +59,73 @@
 }
 
 #jumbo-siemens-frame-big {
-    height: 128px;
-    width: 600px;
-    font-size: 35px;
-    text-wrap: normal;
-    position: relative;
-    line-height: 110px;
-    vertical-align: middle;
-    left: 100px;
 
+    /* Background settings*/
+    width: 400px;
+    line-height: 110px;
+    margin-left: 10%;
+
+
+
+
+    /*Text */
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    text-wrap: normal;
+    font-size: 35px;
+
+    /*Background color*/
     background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
     background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
     background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
     background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
-    margin-top: 100px;
+
+    /*Position*/
+    margin-top: 50px;
     color: white;
 
 
 
 }
 
+
 #jumbo-siemens-frame-small {
-    height: 64px;
-    width: 600px;
-    position: relative;
+
+    /* Background settings*/
+    width: 400px;
     line-height: 60px;
-    vertical-align: middle;
-    text-align: center;
-    left: 100px;
+    margin-top: 5px;
+    margin-left: 10%;
+
+    /* Background color */
     background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
     background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
     background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
     background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
-    margin-top: 5px;
+
+   /* Text */
     color: white;
     font-size: 25px;
+    vertical-align: middle;
+    text-align: center;
+
 }
 
 /*Fakts section */
 
 #facts-wrapper{
     text-align: center;
+    background-color: #cdd9e1;
+}
+#facts-info h3{
+    font-weight: bold;
+    color:black;
+
 }
 
 .fakty {
+    margin-top: 20px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
@@ -113,11 +141,13 @@
 
 .fakt {
     text-align: center;
+    color: black;
 }
 
 .fakt p {
     text-align: center;
     margin-top: 20px;
+    color: black;
 }
 
 .fakt p:nth-child(3){
@@ -125,44 +155,51 @@
     font-size: 30px;
     font-weight: 800;
 }
+#processes-info h3{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.process-img{
+    width: 100%;
+    z-index: 0;
+}
 
 /*Systems section */
 #systems-wrapper{
     padding-top: 500px;
-
-
 }
-#systems-info{
 
-    position: absolute;
-    width: 80%;
-
-
-}
 #systems-info h3 {
     text-align: center;
     margin-bottom: 50px;
-    font-size: 30px;
-    fint-style: bold;
+    font-size: 35px;
+    font-weight:  bold;
+    color: black;
 }
 .systems {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    text-align: center;
 
+}
+.lead{
+    display: block;
 }
 .system-img {
     max-width: 150px;
     max-height: 100%;
 }
 
+
 /*Video embadded*/
 
 #video-info
 {
 
-    margin-top: 350px;
+    margin-top: 50px;
     text-align: center;
     font-weight: bold;
 }
@@ -175,4 +212,15 @@
 }
 .form-group{
     width: 90%;
+}
+.footer{
+    height: 60px;
+    width: 100%;
+
+}
+.text-muted{
+    position: relative;
+    bottom:-30px;
+
+    color: black;
 }

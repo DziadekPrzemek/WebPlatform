@@ -48,6 +48,9 @@
 			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
 			<version>2.1.2.RELEASE</version>
 		</dependency>
+
+
+
 		<!-- Webjars for bootstrap and jQuery-->
 		<dependency>
 			<groupId>org.webjars</groupId>

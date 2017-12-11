@@ -34,22 +34,22 @@
             <h3 class="header section" th:text="#{map.asc.statistics}"/>
             <div class="fakty">
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/school.png"/>
-                    <p class="lead">Zarządzana powierzchnia:</p>
+                    <img class="fakt-img" src="/images/map/city.png"/>
+                    <p class="lead">Monitorowana powierzchnia:</p>
                     <p class="lead">100 000 m2</p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/school.png"/>
-                    <p class="lead">Ilość zarządzanych budynków:</p>
+                    <img class="fakt-img" src="/images/map/surface.png"/>
+                    <p class="lead">Budynki w zarządzaniu:</p>
                     <p class="lead">200</p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/dollar.png"/>
-                    <p class="lead">Zaoszczędzone środki:</p>
+                    <img class="fakt-img" src="/images/map/savings.png"/>
+                    <p class="lead">Łączne oszczędności:</p>
                     <p class="lead">2 mln zł</p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/dollar.png"/>
+                    <img class="fakt-img" src="/images/map/co2.png"/>
                     <p class="lead">Uniknięta emisja:</p>
                     <p class="lead">1000 ton CO2</p>
                 </div>
@@ -58,10 +58,21 @@
 
     </div>
 </div>
+<div id="processes-wrapper">
+    <div class="container">
+        <div id="processes-info">
+            <h3 class="header section" th:text="#{map.asc.process}"/>
+            <div class="process">
+                <img class="process-img" src="/images/map/process2.png"/>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/footer :: common-footer"/>
 <div th:replace="common/header :: before-body-scripts"/>
 </body>
 </html>
