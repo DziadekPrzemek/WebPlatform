@@ -25,13 +25,20 @@
     background-color: #FFFFFF;
     border-color: #FFFFFF;
     font-weight: bold;
+
 }
 
 .navbar-default { margin : 0 !important; }
 
+/*Carousel*/
 .carousel-inner > .item > img {
     width:640px;
     height:400px;
+}
+.carousel-inner p{
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
 }
 
 /* Index */
@@ -201,7 +208,17 @@
 
     margin-top: 50px;
     text-align: center;
+    background-color: #cdd9e1;
+
+}
+.video-header-section{
+    color: black;
     font-weight: bold;
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+
 }
 
 /*Login form*/
@@ -216,11 +233,13 @@
 .footer{
     height: 60px;
     width: 100%;
+    font-weight: bold;
+
 
 }
 .text-muted{
     position: relative;
     bottom:-30px;
-
+    font-weight: bold;
     color: black;
 }
