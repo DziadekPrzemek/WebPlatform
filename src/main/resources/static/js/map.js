@@ -5,6 +5,8 @@ function initMap() {
     }
     var map = new google.maps.Map(document.getElementById('map'),options);
 
+
+
     var markers = [
         {
             coords: {lat: 52.25, lng: 21.02},
@@ -98,6 +100,7 @@ function initMap() {
         addMarker(markers[i]);
     }
 
+
     function addMarker(props) {
         var marker = new google.maps.Marker({
             position:props.coords,
@@ -118,7 +121,16 @@ function initMap() {
             marker.addListener('click', function () {
                 infoWindow.open(map, marker);
             });
+
+
         }
+
+
     }
+
+
+
+
+
 
 }

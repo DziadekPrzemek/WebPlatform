@@ -1,23 +1,22 @@
 
 /* Navbar */
-.starter-template{
-    padding: 0px 0 px;
-    text-align: center;
-    font-size: 25px;
 
-}
+.navbar-nav > li > a {font-size: 18px !important;
+    font-weight: bold !important;
+    padding-top: 35px !important;}
 
-.navbar-nav > li > a {padding-top:20px !important; padding-bottom:20px !important;}
-.navbar {min-height:100px !important}
+.navbar {min-height:90px !important}
 
 .navbar-brand {
-    padding: 2px;
 }
 .navbar-brand>img {
-    height: 150%;
-    padding: 2px;
-    width: auto;
-    margin-left: 10% !important;
+    height: 100%;
+
+    position: absolute !important;
+    top:0px !important;
+    left: 10px !important;
+
+
 
 }
 
@@ -25,10 +24,11 @@
     background-color: #FFFFFF;
     border-color: #FFFFFF;
     font-weight: bold;
+    margin : 0 !important;
 
 }
 
-.navbar-default { margin : 0 !important; }
+
 
 /*Carousel*/
 .carousel-inner > .item > img {
@@ -49,38 +49,44 @@
 
 #jumbotrone-wrapper {
     margin-top: 0px;
-    min-height: 500px;
-
-    background-image: url("/images/index/index.png");
-    background-repeat: no-repeat;
-
-    background-position: top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    top: 60;
+    line-height: 50px;
+    height: 500px;
     width: 100%;
+
+
+
+    background-image: url("/images/index/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+
+    background-size: cover;
+
+    position: absolute;
+
+
+
+
 
 }
 
 #jumbo-siemens-frame-big {
 
     /* Background settings*/
+
     width: 400px;
-    line-height: 110px;
-    margin-left: 10%;
-
-
-
+    height: 110px;
 
     /*Text */
     vertical-align: middle;
     text-align: center;
     color: white;
-    text-wrap: normal;
-    font-size: 35px;
+    font-size: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 
     /*Background color*/
     background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
@@ -89,13 +95,13 @@
     background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
 
     /*Position*/
-    margin-top: 50px;
-    color: white;
-
-
+    margin-top: 70px;
+    margin-left: 63%;
 
 }
-
+#jumbo-siemens-frame-big a{
+    color: white;
+}
 
 #jumbo-siemens-frame-small {
 
@@ -103,7 +109,8 @@
     width: 400px;
     line-height: 60px;
     margin-top: 5px;
-    margin-left: 10%;
+    margin-left: 63%;
+
 
     /* Background color */
     background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
@@ -112,12 +119,14 @@
     background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
 
    /* Text */
-    color: white;
-    font-size: 25px;
+
     vertical-align: middle;
     text-align: center;
+    font-size: 27px;
+    color: white;
 
 }
+
 
 /*Fakts section */
 
@@ -183,6 +192,7 @@
     font-size: 35px;
     font-weight:  bold;
     color: black;
+    font-family: Arial;
 }
 .systems {
     display: -ms-flexbox;
@@ -216,7 +226,7 @@
     font-weight: bold;
     font-size: 35px;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
 
 }
@@ -234,9 +244,15 @@
     height: 60px;
     width: 100%;
     font-weight: bold;
-
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    padding-top: 36px;
+    text-decoration: none;
+    text-align: center;
 
 }
+
 .text-muted{
     position: relative;
     bottom:-30px;
