@@ -3,8 +3,7 @@
 <head th:replace="common/header :: common-header"/>
 <div th:replace="common/navbar :: common-navbar"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <body>
 <div class="contaner">
     <div class="row">
@@ -12,7 +11,7 @@
             <div class="well">
                 <div class="text-center">
 
-                    <h1 class="lead"><b>Masz pytania? Napisz!</b></h1>
+                    <h1 class="lead" th:text="#{contact.question.text}"/>
                 </div>
                 <form id="contactForm"
                       th:action="@{/contact}"
@@ -21,20 +20,20 @@
                       class="text-left">
 
                     <div class="form-group">
-                        <label for="name" >Imię i nazwisko:</label>
+                        <label for="name" th:text="#{contact.name.text}"/>
                         <input type="text" id="name" th:field="*{name}" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
+                        <label for="email" th:text="#{contact.email.text}"/>
                         <input type="email" id="email" th:field="*{email}" class="form-control"/>
                     </div>
 
                     <div class="form-group">
-                        <label for="feedback" >Wiadomość:</label>
+                        <label for="feedback" th:text="#{contact.messege.text}"/>
                         <textarea id="feedback" th:field="*{feedback}" rows="5" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <button role="submit"  class="btn btn-primary" >Wyślij</button>
+                        <button role="submit" th:text="#{contact.sendButton.text}" class="btn btn-primary" />
                     </div>
                 </form>
             </div>

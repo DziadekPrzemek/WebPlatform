@@ -2,18 +2,13 @@
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <body>
 <div th:fragment="common-footer" class="container">
-
     <footer class="footer">
         <div class="col-xs-12 footer-links">
-            <a class="A3 hidden-xs hidden-sm hidden-md" href="http://www.siemens.pl/" title="Siemens Polska" target="_blank" rel="noopener">Siemens Polska</a>
-            <span class="P3">@ Siemens Sp. z o.o., 1996 – 2017</span>
-
-            <a class="A3" href="http://www.siemens.pl/pl/informacje_firmowe.htm" target="_blank" rel="noopener">Informacje firmowe</a>
-
-            <a class="A3" href="http://www.siemens.pl/pl/polityka_prywatnosci.htm" target="_blank" rel="noopener">Polityka prywatności</a>
-
-            <a class="A3" href="http://www.siemens.pl/pl/warunki_uzytkowania.htm" target="_blank" rel="noopener">Warunki użytkowania</a>
-
+            <a class="A3 hidden-xs hidden-sm hidden-md" th:href="#{footer.companySite.url}" title="Siemens Polska" target="_blank" th:text="#{footer.companyName.text}" rel="noopener"/>
+            <span class="P3" th:text="#{footer.companyFooterInfo.text}"/>
+            <a class="A3" th:href="#{footer.companyInfo.url}" th:text="#{footer.companyInfo.text}"/>
+            <a class="A3" th:href="#{footer.privacyPolicy.url}" th:text="#{footer.privacyPolicy.text}" target="_blank" rel="noopener"/>
+            <a class="A3" th:href="#{footer.useCondition.url}" th:text="#{footer.useCondition.text}" target="_blank" rel="noopener"/>
         </div>
     </footer>
 </div>

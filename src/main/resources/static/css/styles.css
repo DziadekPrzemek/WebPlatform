@@ -50,7 +50,7 @@
 #jumbotrone-wrapper {
     margin-top: 0px;
     line-height: 50px;
-    height: 500px;
+    min-height: 500px;
     width: 100%;
 
 
