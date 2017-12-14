@@ -3,18 +3,11 @@
 <head th:replace="common/header :: common-header"/>
 <div th:replace="common/navbar :: common-navbar"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
     #map {
         height: 70%;
-
     }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
+     html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -22,46 +15,52 @@
 </style>
 <script src="/js/map.js"></script>
 <body>
-
 <div id="map"></div>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALBuUkoeYIwx_h1UhC_AqQMZvdKDU8dXM&amp;callback=initMap"
         async="async" defer="defer"></script>
-
 <div id="facts-wrapper">
     <div class="container">
         <div id="facts-info">
             <h3 class="header section" th:text="#{map.asc.statistics}"/>
             <div class="fakty">
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/school.png"/>
-                    <p class="lead">Zarządzana powierzchnia:</p>
-                    <p class="lead">100 000 m2</p>
+                    <img class="fakt-img" th:src="#{map.surface.img}" />
+                    <p class="lead" th:text="#{map.surface.info}"/>
+                    <p class="lead" th:text="#{map.surface.info.counter}"/>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/school.png"/>
-                    <p class="lead">Ilość zarządzanych budynków:</p>
-                    <p class="lead">200</p>
+                    <img class="fakt-img" th:src="#{map.management.img}" />
+                    <p class="lead" th:text="#{map.management.info}"/>
+                    <p class="lead" th:text="#{map.management.counter}"/>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/dollar.png"/>
-                    <p class="lead">Zaoszczędzone środki:</p>
-                    <p class="lead">2 mln zł</p>
+                    <img class="fakt-img" th:src="#{map.savings.img}"/>
+                    <p class="lead" th:text="#{map.savings.info}"/>
+                    <p class="lead" th:text="#{map.savings.counter}"/>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" src="/images/dollar.png"/>
-                    <p class="lead">Uniknięta emisja:</p>
-                    <p class="lead">1000 ton CO2</p>
+                    <img class="fakt-img" th:src="#{map.co2.img}"/>
+                    <p class="lead" th:text="#{map.co2.info}"/>
+                    <p class="lead" th:text="#{map.co2.counter}"/>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
+<div id="processes-wrapper">
+    <div class="container">
+        <div id="processes-info">
+            <h3 class="header section" th:text="#{map.asc.process}"/>
+            <div class="process">
+                <img class="process-img" th:src="#{map.process.img}"/>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/footer :: common-footer"/>
 <div th:replace="common/header :: before-body-scripts"/>
 </body>
 </html>

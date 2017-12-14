@@ -2,8 +2,6 @@
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"/>
 <div th:replace="common/navbar :: common-navbar"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <body>
 
@@ -15,17 +13,28 @@
 <div id="my-slider" class="carousel slider" data-ride="carousel">
 
     <ol class="carousel-indicators">
-        <li data-target="#my-slider" data-slide-to="0"></li>
+        <li data-target="#my-slider" data-slide-to="0">
+
+        </li>
         <li data-target="#my-slider" data-slide-to="1"></li>
     </ol>
 
     <div class="carousel-inner" role="listbox">
 
         <div class="item active">
-            <img src="/images/savings.JPG" alt="fruits" class="img-responsive center-block"/>
+            <img src="/images/savings.JPG" alt="savings" class="img-responsive center-block"/>
+            <p>Modernizacja w formule Performace Contracting gwarantuje zmniejszenie zużycia energii bez lub z niewielkimi kosztami inwestycyjnymi Znaczące efekty energetyczne mogą być osiągnięte przez częściowe lub kompleksowe modernizacje infrastruktury budynków. Koszty modernizacji mogą być amortyzowane z oszczędności, mogą Państwo odrazu korzystać z racjonalnego wykorzystania energii bez lub z niewielkimi nakładami początkowymi.
+            </p>
         </div>
         <div class="item" >
-            <img src="/images/investment_process.JPG" alt="fruits" class="img-responsive center-block"/>
+            <img src="/images/investment_process.JPG" alt="investment_process" class="img-responsive center-block"/>
+            <p>Działając wspólnie z Państwem wypracujemy wyczerpujący plan dopasowany do Państwa technicznych i strategicznych celów, nastawiony na oszczędne zużycie energii i uwzględniający aspekty ochrony środowiska.</p>
+            <p>
+                • przedstawienie analizy wstępnej w celu określenia aktualnego zużycia energii i zidentyfikowania obszarów o maksymalnym potencjale uzyskania oszczędności</p>
+            <p>• sporządzenie szczegółowej analizy energetycznej w celu określenia listy zadań modernizacyjnych i zmian, które spełniając uzgodnione kryteria inwestycyjne dadzą najlepsze efekty w zakresie poprawy parametrów budynków</p>
+        <p>• dostarczenie i zainstalowanie nowych urządzeń oraz wprowadzenie udoskonaleń i usprawnień</p>
+<p>• regularne monitorowanie obiektów w okresie kontraktu oraz weryfikacja wyników w celu zmaksymalizowania oszczędności energii.
+</p>
         </div>
         </div>
 
@@ -38,12 +47,11 @@
     </div>
 
 </div>
-    </div>
-
-
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/footer :: common-footer"/>
 <div th:replace="common/header :: before-body-scripts"/>
 </body>
 </html>

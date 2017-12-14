@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head th:replace="common/header :: common-header"/>
 <div th:replace="common/navbar :: common-navbar"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <body>
 <div id='jumbotrone-wrapper'>
@@ -12,12 +11,12 @@
         <div className="container">
             <div className="row">
                 <div id='jumbo-siemens-frame-big' className='col-xs-11 col-md-9 col-lg-7 '>
-                    Building Performance &amp; Sustainability
+                   <a th:href="#{index.btSite}" th:text="#{index.division.name}"></a>
                 </div>
             </div>
             <div className="row">
-                <div id='jumbo-siemens-frame-small' className='col-xs-11 col-md-9 col-lg-7 '>
-                    <p>Advantage Operational Center</p>
+                <div id='jumbo-siemens-frame-small' className='col-xs-11 col-md-9 col-lg-7' th:text="#{index.our.name}">
+
                 </div>
             </div>
         </div>
@@ -26,23 +25,22 @@
 <div id="systems-wrapper">
     <div class="container">
         <div id="systems-info">
-            <h3 class="header section">Wybierz system do którego chcesz się zalogować:</h3>
+            <h3 class="header section" th:text="#{index.system.chooser}"/>
             <div class="systems">
                 <div class="system">
-                    <a  th:href="#{url.navigator}"> <img class="system-img" src="/images/school.png"/></a>
-                    <p class="lead">Advantage Navigator</p>
+                    <a  th:href="#{url.navigator}"> <img class="system-img" th:src="#{index.system.one.image}"/></a>
+
                     </div>
                 <div class="system">
-                    <a  th:href="#{url.cwp}">  <img class="system-img" src="/images/school.png" /></a>
-                    <p class="lead">Customer Web Portal</p>
+                    <a  th:href="#{url.cwp}">  <img class="system-img" th:src="#{index.system.two.image}"/></a>
+
                     </div>
                 <div class="system">
-                    <a th:href="#{url.osticket}"><img class="system-img" src="/images/school.png" /></a>
-                    <p class="lead">Zgłoszenie usterki</p>
+                    <a th:href="#{url.osticket}"><img class="system-img" th:src="#{index.system.three.image}"/></a>
+
                     </div>
                 <div class="system">
-                    <a href="/login"><img class="system-img" src="/images/school.png" /></a>
-                    <p class="lead">Kalendarz prac</p>
+                    <a href="/login"><img class="system-img" th:src="#{index.system.four.image}"/></a>
                      </div>
             </div>
         </div>
@@ -51,7 +49,7 @@
 
 </div>
 <div id="video-info">
-    <h3 class="header section">Efektywność energetyczna w budynkach użyteczności publicznej</h3>
+    <h3 class="video-header-section" th:text="#{index.video.description}"/>
 
 <div class="embed-responsive embed-responsive-16by9" >
     <iframe class="embed-responsive-item"  th:src="#{homepage.video}"></iframe>
@@ -61,6 +59,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<div th:replace="common/footer :: common-footer"/>
 <div th:replace="common/header :: before-body-scripts"/>
 </body>
 </html>
