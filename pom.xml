@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.bpsportal</groupId>
@@ -34,7 +34,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-			<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -53,8 +53,6 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
-
-
 		<!-- Webjars for bootstrap and jQuery-->
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -71,24 +69,24 @@
 			<artifactId>angular</artifactId>
 			<version>1.6.4</version>
 		</dependency>
+
+
+		<!-- Full Calendar Webjars-->
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/fullcalendar -->
 		<dependency>
-			<groupId>org.webjars.bower</groupId>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>fullcalendar</artifactId>
+			<version>3.7.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/moment -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
 			<artifactId>moment</artifactId>
-			<version>2.18.1</version>
+			<version>2.19.4</version>
 		</dependency>
 
-			<!-- Full Calendar Webjars-->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>fullcalendar</artifactId>
-			<version>2.2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>momentjs</artifactId>
-			<version>2.9.0</version>
-		</dependency>
-<!--Hibernate-->
+
+		<!--Hibernate-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery-ui</artifactId>
@@ -141,4 +139,3 @@
 		</plugins>
 	</build>
 </project>
-

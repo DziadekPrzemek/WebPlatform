@@ -1,16 +1,17 @@
 package pl.bpsportal.backend.services;
 
-
-
-		import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-import pl.bpsportal.web.model.Role;
-import pl.bpsportal.web.model.User;
-
 import java.util.Arrays;
 import java.util.HashSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+
+import pl.bpsportal.web.repository.UserRepository;
+import pl.bpsportal.web.model.Role;
+import pl.bpsportal.web.model.User;
+import pl.bpsportal.web.repository.RoleRepository;
 @Service("userService")
 public class UserServiceImpl implements UserService{
 

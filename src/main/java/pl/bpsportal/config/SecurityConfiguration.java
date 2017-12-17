@@ -1,5 +1,6 @@
 package pl.bpsportal.config;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -11,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.sql.DataSource;
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	private static final String[] PUBLIC_MATCHERS={
 			"/webjars/**",
@@ -33,6 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@Autowired
+	@Qualifier("dataSource")
 	private DataSource dataSource;
 
 	@Value("${spring.queries.users-query}")
@@ -44,8 +46,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception{
 
 		http
-		.authorizeRequests()
-		.antMatchers(PUBLIC_MATCHERS).permitAll()
+				.authorizeRequests()
+				.antMatchers(PUBLIC_MATCHERS).permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.formLogin().loginPage("/login").defaultSuccessUrl("/calendar")

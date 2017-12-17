@@ -202,6 +202,7 @@
     text-align: center;
 
 }
+
 .lead{
     display: block;
 }
@@ -258,4 +259,11 @@
     bottom:-30px;
     font-weight: bold;
     color: black;
+}
+
+.contact{
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }

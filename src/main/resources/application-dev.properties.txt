@@ -1,6 +1,6 @@
-spring.mail.host=smtp.gmail.com
-spring.mail.username=dziadekdev@gmail.com
-spring.mail.password=haslo123
+spring.mail.host=
+spring.mail.username=
+spring.mail.password=
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.socketFactory.port=465
 spring.mail.properties.mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
@@ -11,9 +11,9 @@ spring.mail.properties.mail.smtp.ssl.enable=true
 # ===============================
 # = DATA SOURCE
 # ===============================
-spring.datasource.url = jdbc:mysql://localhost:3306/users?autoReconnect=true&useSSL=false
-spring.datasource.username = root
-spring.datasource.password = admin
+spring.datasource.url =
+spring.datasource.username =
+spring.datasource.password =
 spring.datasource.testWhileIdle = true
 spring.datasource.validationQuery = SELECT 1
 
@@ -24,7 +24,7 @@ spring.jpa.show-sql = true
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
-
+spring.jpa.hibernate.ddl-auto=update
 # ===============================
 # = Thymeleaf configurations
 # ===============================
