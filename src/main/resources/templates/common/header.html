@@ -11,12 +11,13 @@
 
     <!-- Custom styles for this template -->
     <link type="text/css" th:href="@{/css/styles.css}" rel="stylesheet" media="screen"/>
+    <div th:fragment="before-body-scripts">
+        <script th:src="@{/webjars/jquery/2.2.4/dist/jquery.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+        <script th:src="@{/webjars/jquery-ui/1.11.2/jquery-ui.min.js}"></script>
+
+    </div>
 
 </head>
-<div th:fragment="before-body-scripts">
-    <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
-
-</div>
 
 </html>

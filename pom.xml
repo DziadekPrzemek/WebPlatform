@@ -59,16 +59,19 @@
 			<artifactId>bootstrap</artifactId>
 			<version>3.3.6</version>
 		</dependency>
-		<dependency>
-			<groupId>org.webjars.bower</groupId>
-			<artifactId>jquery</artifactId>
-			<version>3.2.1</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>angular</artifactId>
 			<version>1.6.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>jquery</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+
 
 
 		<!-- Full Calendar Webjars-->
