@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.sql.DataSource;
 @Configuration
@@ -28,6 +29,28 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			"/common/**",
 			"/bootstrap/**",
 
+
+
+	};
+	private static final String[] ADMIN_MATCHERS={
+			"/webjars/**",
+			"/css/**",
+			"/js/**",
+			"/images/**",
+			"/",
+			"/about/**",
+			"/contact/**",
+			"/error/**/*",
+			"/map/**",
+			"/registration/**",
+			"/common/**",
+			"/bootstrap/**",
+			"/admin/**",
+			"/calendar/**",
+
+
+
+
 	};
 
 	@Autowired
@@ -42,19 +65,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	@Value("${spring.queries.roles-query}")
 	private String rolesQuery;
-	@Override
+
 	protected void configure(HttpSecurity http) throws Exception{
 
-		http
-				.authorizeRequests()
+
+		http.
+				authorizeRequests()
 				.antMatchers(PUBLIC_MATCHERS).permitAll()
-				.anyRequest().authenticated()
-				.and()
-				.formLogin().loginPage("/login").defaultSuccessUrl("/calendar")
-				.failureUrl("/login?error").permitAll()
+				.antMatchers("/login").permitAll()
+				.antMatchers("/panel").hasAuthority("ADMIN")
+				.antMatchers("/calendar").hasAnyAuthority("USER","ADMIN")
+				.anyRequest()
+				.authenticated().and().csrf().disable()
+				.formLogin().defaultSuccessUrl("/calendar")
+
+				.loginPage("/login").failureUrl("/login?error").permitAll()
 				.and()
 				.logout().permitAll();
 	}
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth)
 			throws Exception {
@@ -65,6 +94,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				.dataSource(dataSource)
 				.passwordEncoder(bCryptPasswordEncoder);
 	}
+
 
 
 }

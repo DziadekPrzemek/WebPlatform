@@ -1,7 +1,5 @@
 package pl.bpsportal.web.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,12 +15,12 @@ public class ContactController {
 	public static final String FEEDBACK_MODEL_KEY = "feedback";
 
 	private static final String CONTACT_US_VIEW_NAME = "contact/contact";
-	private static final Logger LOG = LoggerFactory.getLogger(ContactController.class);
+
 
 	@Autowired
 	private EmailService emailService;
 
-@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public String contactGet(ModelMap model){
 		FeedbackPojo feedbackPojo = new FeedbackPojo();
 		model.addAttribute(ContactController.FEEDBACK_MODEL_KEY,feedbackPojo);
@@ -30,7 +28,7 @@ public class ContactController {
 	}
 	@RequestMapping(value = "/contact", method = RequestMethod.POST)
 	public String contactPost(@ModelAttribute(FEEDBACK_MODEL_KEY) FeedbackPojo feedbackPojo) {
-		LOG.debug("Feedback POJO content: {}", feedbackPojo);
+
 		emailService.sendFeedbackEmail(feedbackPojo);
 		return ContactController.CONTACT_US_VIEW_NAME;
 	}

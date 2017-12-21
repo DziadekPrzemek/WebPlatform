@@ -12,9 +12,8 @@ public abstract class AbstractEmailService implements EmailService {
 	protected SimpleMailMessage prepareSimpleMailMessegeFromFeedbackPojo(FeedbackPojo feedbackPojo){
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setTo(defaultToAdress);
-		message.setFrom(feedbackPojo.getEmail());
 		message.setSubject("Wiadomość z formularza kontaktowego od: "+feedbackPojo.getName()+"! ");
-		message.setText("Pan / Pani "+ feedbackPojo.getName() +" przesyła wiadomość następującej treści: "+feedbackPojo.getFeedback()+" Dane kontaktowe: "+feedbackPojo.getEmail());
+		message.setText("Pan / Pani "+ feedbackPojo.getName() +" przesyła wiadomość następującej treści: "+feedbackPojo.getFeedback()+" Email do kontaktu: "+feedbackPojo.getEmail()+" Telefon kontaktowy: "+feedbackPojo.getPhone());
 		return message;
 	}
 

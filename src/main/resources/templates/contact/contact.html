@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="common/header :: common-header"/>
-<div th:replace="common/navbar :: common-navbar"/>
+<head th:replace="common/header :: common-header"></head>
+<div th:replace="common/navbar :: common-navbar"></div>
 
 
 <body>
 <div class="contact" id="contact">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="well">
-                <div class="text-center">
+        <div class="col-sm-4 col-sm-offset-4">
 
-                    <h1 class="lead" th:text="#{contact.question.text}"/>
-                </div>
                 <form id="contactForm"
                       th:action="@{/contact}"
                       th:object="${feedback}"
                       method="post"
                       class="text-left">
-
+                    <h1 id="contact-lead" th:text="#{contact.question.text}"></h1>
                     <div class="form-group">
-                        <label for="name" th:text="#{contact.name.text}"/>
+                        <label class="contact-form-label" for="name" th:text="#{contact.name.text}"></label>
                         <input type="text" id="name" th:field="*{name}" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label for="email" th:text="#{contact.email.text}"/>
+                        <label class="contact-form-label" for="email" th:text="#{contact.email.text}"></label>
                         <input type="email" id="email" th:field="*{email}" class="form-control"/>
                     </div>
-
                     <div class="form-group">
-                        <label for="feedback" th:text="#{contact.messege.text}"/>
-                        <textarea id="feedback" th:field="*{feedback}" rows="5" class="form-control"/>
+                        <label class="contact-form-label" for="phone" th:text="#{contact.phone.text}"></label>
+                        <input type="text" id="phone" th:field="*{phone}" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <button role="submit" th:text="#{contact.sendButton.text}" class="btn btn-primary" />
+                        <label class="contact-form-label" for="feedback" th:text="#{contact.messege.text}"></label>
+                        <textarea id="feedback" th:field="*{feedback}" rows="5" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button role="submit" th:text="#{contact.sendButton.text}" class="btn btn-secondary pull-right" ></button>
                     </div>
                 </form>
-            </div>
         </div>
-    </div>
+        <div class="col-sm-3 col-sm-offset-1">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSiemensPolska%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        </div>
 </div>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<div th:replace="common/footer :: common-footer"/>
-<div th:replace="common/header :: before-body-scripts"/>
+<div th:replace="common/footer :: common-footer"></div>
+<div th:replace="common/header :: before-body-scripts"></div>
 </body>
 </html>

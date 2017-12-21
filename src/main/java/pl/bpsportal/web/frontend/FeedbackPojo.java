@@ -19,6 +19,9 @@ public class FeedbackPojo implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getPhone() { return phone; }
+
+	public void setPhone(String phone) { this.phone = phone; }
 
 	public String getFeedback() {
 		return feedback;
@@ -34,6 +37,7 @@ public class FeedbackPojo implements Serializable {
 		sb.append("name='").append(name).append('\'');
 		sb.append(", email='").append(email).append('\'');
 		sb.append(", feedback='").append(feedback).append('\'');
+		sb.append(", phone='").append(phone).append('\'');
 		sb.append('}');
 		return sb.toString();
 	}
@@ -41,6 +45,7 @@ public class FeedbackPojo implements Serializable {
 	private String name;
 	private String email;
 	private String feedback;
+	private String phone;
 
 
 

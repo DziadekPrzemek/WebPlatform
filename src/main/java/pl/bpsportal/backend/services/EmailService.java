@@ -5,6 +5,6 @@ import pl.bpsportal.web.frontend.FeedbackPojo;
 
 
 public interface EmailService {
-	public void sendFeedbackEmail(FeedbackPojo feedbackPojo);
-	public void sendGenericEmailMessage(SimpleMailMessage message);
+	 void sendFeedbackEmail(FeedbackPojo feedbackPojo);
+	void sendGenericEmailMessage(SimpleMailMessage message);
 }

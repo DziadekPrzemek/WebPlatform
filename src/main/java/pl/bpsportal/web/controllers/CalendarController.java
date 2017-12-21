@@ -18,7 +18,7 @@ import java.util.List;
 public class CalendarController {
 	@RequestMapping(value="/calendar", method = RequestMethod.GET)
 	public ModelAndView calendar(){
-		ModelAndView modelAndView = new ModelAndView("calendar/jsoncalendar");
+		ModelAndView modelAndView = new ModelAndView("calendar/calendar");
 		return modelAndView;
 	}
 }
