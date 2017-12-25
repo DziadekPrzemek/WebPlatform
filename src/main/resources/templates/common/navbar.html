@@ -36,12 +36,7 @@
                     <li><a href="/about" th:text="#{navbar.about}"></a></li>
                     <li><a href="/contact" th:text="#{navbar.contact}"></a></li>
 
-                    <li sec:authorize="isAuthenticated()">
-                        <form id="f" th:action="@{/logout}" method="post" role="form" class="navbar-form">
-                            <button id="logoutBtn" type="submit" th:text="#{navbar.logout}" class="btn btn-primaty"></button>
-                        </form>
 
-                    </li>
 
 
                 </ul>

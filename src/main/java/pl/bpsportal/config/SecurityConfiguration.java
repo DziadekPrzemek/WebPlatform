@@ -28,26 +28,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			"/registration/**",
 			"/common/**",
 			"/bootstrap/**",
-
-
-
-	};
-	private static final String[] ADMIN_MATCHERS={
-			"/webjars/**",
-			"/css/**",
-			"/js/**",
-			"/images/**",
-			"/",
-			"/about/**",
-			"/contact/**",
-			"/error/**/*",
-			"/map/**",
-			"/registration/**",
-			"/common/**",
-			"/bootstrap/**",
-			"/admin/**",
-			"/calendar/**",
-
+			"/user/**",
+			"/php/**",
 
 
 
@@ -72,13 +54,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.
 				authorizeRequests()
 				.antMatchers(PUBLIC_MATCHERS).permitAll()
-				.antMatchers("/login").permitAll()
 				.antMatchers("/panel").hasAuthority("ADMIN")
 				.antMatchers("/calendar").hasAnyAuthority("USER","ADMIN")
 				.anyRequest()
 				.authenticated().and().csrf().disable()
 				.formLogin().defaultSuccessUrl("/calendar")
-
 				.loginPage("/login").failureUrl("/login?error").permitAll()
 				.and()
 				.logout().permitAll();

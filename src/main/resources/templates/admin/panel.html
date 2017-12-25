@@ -6,7 +6,80 @@
 
 
 <body>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home" th:text="#{panel.tab.registration}"></a></li>
 
+</ul>
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <form th:action="@{/}" method="get">
+        </form>
+
+        <div id = "registration" class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-6 col-md-offset-4">
+                    <form autocomplete="off" action="#" th:action="@{/panel}"
+                          th:object="${user}" method="post" class="form-horizontal"
+                          role="form">
+                        <h3 th:text="#{registration.header.text}"/>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                                       class="validation-message"></label>
+                                <input type="text" th:field="*{name}" th:placeholder="#{registration.NameField.Text}"
+                                       class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <label	th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                                          class="validation-message"></label>
+                                <input type="text" th:field="*{lastName}"
+                                       th:placeholder="#{registration.SurnameField.Text}" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{email}" th:placeholder="#{registration.EmailField.Text}"
+                                       class="form-control" /> <label
+                                    th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="password" th:field="*{password}"
+                                       th:placeholder="#{registration.PasswordField.Text}" class="form-control" /> <label
+                                    th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <button type="submit" class="btn btn-primary btn-block" th:text="#{registration.button.text}"/>
+                            </div>
+                        </div>
+
+                        <div th:if="${#fields.hasAnyErrors()}" class="alert alert-danger alert-dissmisible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                            <p th:text="#{panel.tab.registration.error.text}"/>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <h3>Tutaj dodać listę zarejestrowanych użytkowników</h3>
+
+    </div>
+
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
