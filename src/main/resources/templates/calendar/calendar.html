@@ -3,22 +3,20 @@
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"></head>
 <div th:replace="common/navbar :: common-navbar"></div>
-
-
 <script th:src="@{/webjars/moment/2.19.4/min/moment.min.js}" type="text/javascript"></script>
-<script th:src="@{/webjars/fullcalendar/3.7.0/dist/fullcalendar.js}"  type="text/javascript"></script>
+<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/fullcalendar/3.7.0/dist/fullcalendar.js}" type="text/javascript"></script>
 <script th:src="@{/webjars/fullcalendar/3.7.0/dist/locale/pl.js}"></script>
 <script th:src="@{/webjars/fullcalendar/3.7.0/dist/gcal.min.js}" type="text/javascript"></script>
 <link th:href="@{/webjars/fullcalendar/3.7.0/dist/fullcalendar.css}" rel="stylesheet"/>
 <script type='text/javascript' src="/js/calendar.js"></script>
-
-
 <body>
-<div id="calendar"/>
+<div id="calendar"></div>
 <div class="container">
-      <!-- Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
+            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -30,17 +28,13 @@
                     <p class="eventOption">Opis wydarzenia: </p> <p id="eventDescription"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button pull-right" class="btn btn-default" data-dismiss="modal">Zamiknij</button>
+                    <button type="button pull-right" class="btn btn-default" data-dismiss="modal">Zamknij</button>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
-
-
-<div th:replace="common/footer :: common-footer"/>
+<div th:replace="common/cookies :: common-cookies"></div>
+<div th:replace="common/footer :: common-footer"></div>
 </body>
-
 </html>

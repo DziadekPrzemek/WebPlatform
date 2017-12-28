@@ -16,6 +16,7 @@ import javax.sql.DataSource;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	private static final String[] PUBLIC_MATCHERS={
+
 			"/webjars/**",
 			"/css/**",
 			"/js/**",
@@ -29,8 +30,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			"/common/**",
 			"/bootstrap/**",
 			"/user/**",
-			"/php/**",
-
 
 
 	};
@@ -74,7 +73,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				.dataSource(dataSource)
 				.passwordEncoder(bCryptPasswordEncoder);
 	}
-
-
-
 }

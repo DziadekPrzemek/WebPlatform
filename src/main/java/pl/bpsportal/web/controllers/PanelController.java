@@ -1,34 +1,47 @@
 package pl.bpsportal.web.controllers;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import pl.bpsportal.backend.services.UserService;
+import pl.bpsportal.backend.services.UsersServices;
 import pl.bpsportal.web.model.User;
+
+import javax.validation.Valid;
 
 
 
 @Controller
-public class RegistrationController {
+public class PanelController {
+
+	private final UserService userService;
+	private UsersServices usersServices;
 
 	@Autowired
-	private UserService userService;
+	public void setUsersServices(UsersServices usersServices){
+		this.usersServices = usersServices;
+	}
+
+	@Autowired
+	public PanelController(UserService userService) {
+		this.userService = userService;
+	}
 
 
-	@RequestMapping(value="/panel", method = RequestMethod.GET)
-	public ModelAndView registration(){
+	@RequestMapping(value="panel", method = RequestMethod.GET)
+	public ModelAndView list(){
 		ModelAndView modelAndView = new ModelAndView();
 		User user = new User();
 		modelAndView.addObject("user", user);
+		modelAndView.addObject("Users", usersServices.listAllUsers());
 		modelAndView.setViewName("admin/panel");
 		return modelAndView;
+
 	}
 
 	@RequestMapping(value = "/panel", method = RequestMethod.POST)
@@ -51,8 +64,4 @@ public class RegistrationController {
 		}
 		return modelAndView;
 	}
-
-
-
-
 }

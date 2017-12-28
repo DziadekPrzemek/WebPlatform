@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="common/header :: common-header"/>
-<div th:replace="common/navbar :: common-navbar"/>
-
+<head th:replace="common/header :: common-header"></head>
+<div th:replace="common/navbar :: common-navbar"></div>
 <style>
     #map {
-        height: 70%;
+        height: 75%;
     }
      html, body {
         height: 100%;
@@ -21,43 +20,30 @@
 <div id="facts-wrapper">
     <div class="container">
         <div id="facts-info">
-            <h3 class="header section" th:text="#{map.asc.statistics}"/>
+            <h3 class="header section" th:text="#{map.asc.statistics}"></h3>
             <div class="fakty">
                 <div class="fakt">
-                    <img class="fakt-img" th:src="#{map.surface.img}" />
-                    <p class="lead" th:text="#{map.surface.info}"/>
-                    <p class="lead" th:text="#{map.surface.info.counter}"/>
+                    <p class="lead" th:text="#{map.management.info}"></p>
+                    <p class="map-info" th:text="#{map.management.counter}"></p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" th:src="#{map.management.img}" />
-                    <p class="lead" th:text="#{map.management.info}"/>
-                    <p class="lead" th:text="#{map.management.counter}"/>
+                    <p class="lead" th:text="#{map.fact.one.info}"></p>
+                    <p class="map-info" th:text="#{map.fact.one.info.counter}"></p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" th:src="#{map.savings.img}"/>
-                    <p class="lead" th:text="#{map.savings.info}"/>
-                    <p class="lead" th:text="#{map.savings.counter}"/>
+                    <p class="lead" th:text="#{map.savings.info}"></p>
+                    <p class="map-info" th:text="#{map.savings.counter}"></p>
                 </div>
                 <div class="fakt">
-                    <img class="fakt-img" th:src="#{map.co2.img}"/>
-                    <p class="lead" th:text="#{map.co2.info}"/>
-                    <p class="lead" th:text="#{map.co2.counter}"/>
+                    <p class="lead" th:text="#{map.fact.two.info}"></p>
+                    <p class="map-info" th:text="#{map.fact.two.counter}"></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="video-info">
-    <h3 class="video-header-section" th:text="#{index.video.description}"/>
-
-    <div class="embed-responsive embed-responsive-16by9" >
-        <iframe class="embed-responsive-item"  th:src="#{homepage.video}"></iframe>
-    </div>
-</div>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<div th:replace="common/footer :: common-footer"/>
-<div th:replace="common/header :: before-body-scripts"/>
+<div th:replace="common/cookies :: common-cookies"></div>
+<div th:replace="common/footer :: common-footer"></div>
+<div th:replace="common/header :: before-body-scripts"></div>
 </body>
 </html>

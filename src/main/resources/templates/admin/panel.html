@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<head th:replace="common/header :: common-header"/>
-<div th:replace="common/navbar :: common-navbar"/>
+<head th:replace="common/header :: common-header"></head>
+<div th:replace="common/navbar :: common-navbar"></div>
 
 
 <body>
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home" th:text="#{panel.tab.registration}"></a></li>
+    <li><a data-toggle="tab" href="#menu1" th:text="#{panel.tab.userList}"></a></li>
+
 
 </ul>
 <div class="tab-content">
+
     <div id="home" class="tab-pane fade in active">
         <form th:action="@{/}" method="get">
         </form>
@@ -21,7 +24,7 @@
                     <form autocomplete="off" action="#" th:action="@{/panel}"
                           th:object="${user}" method="post" class="form-horizontal"
                           role="form">
-                        <h3 th:text="#{registration.header.text}"/>
+                        <h3 th:text="#{registration.header.text}"></h3>
                         <div class="form-group">
                             <div class="col-sm-9">
                                 <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -67,7 +70,7 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">x</span>
                             </button>
-                            <p th:text="#{panel.tab.registration.error.text}"/>
+                            <p th:text="#{panel.tab.registration.error.text}"></p>
                         </div>
                         </form>
                 </div>
@@ -75,8 +78,24 @@
         </div>
     </div>
     <div id="menu1" class="tab-pane fade">
-        <h3>Tutaj dodać listę zarejestrowanych użytkowników</h3>
 
+            <h2>Lista zarejestrowanych kont:</h2>
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Rola</th>
+                </tr>
+                <tr th:each="Users : ${Users}">
+                    <td th:text="${Users.id}">Id</td>
+                    <td th:text="${Users.email}">Email</td>
+                    <td th:text="${Users.name}">Imię</td>
+                    <td th:text="${Users.lastName}">Nazwisko</td>
+                    <td th:text="${Users.roles}">Rola</td>
+                    </tr>
+            </table>
     </div>
 
 </div>
