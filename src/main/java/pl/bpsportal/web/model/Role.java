@@ -1,6 +1,5 @@
 package pl.bpsportal.web.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +16,6 @@ public class Role {
 	private int id;
 	@Column(name="role")
 	private String role;
-
 	public int getId() {
 		return id;
 	}
@@ -30,6 +28,4 @@ public class Role {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-
 }

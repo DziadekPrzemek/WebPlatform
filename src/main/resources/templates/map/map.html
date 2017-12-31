@@ -2,18 +2,9 @@
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header"></head>
 <div th:replace="common/navbar :: common-navbar"></div>
-<style>
-    #map {
-        height: 75%;
-    }
-     html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-</style>
 <script src="/js/map.js"></script>
 <body>
+<link type="text/css" th:href="@{/css/map.css}" rel="stylesheet" media="screen"/>
 <div id="map"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALBuUkoeYIwx_h1UhC_AqQMZvdKDU8dXM&amp;callback=initMap"
         async="async" defer="defer"></script>

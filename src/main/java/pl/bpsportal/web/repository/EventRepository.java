@@ -5,5 +5,4 @@ import java.util.List;
 
 public interface EventRepository extends CrudRepository<Events, Long> {
     List<Events> findAll();
-
 }

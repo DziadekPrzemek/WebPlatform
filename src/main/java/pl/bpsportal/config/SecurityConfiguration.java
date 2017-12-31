@@ -14,9 +14,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
-
-	private static final String[] PUBLIC_MATCHERS={
-
+	private static final String[] PUBLIC_MATCHERS = {
 			"/webjars/**",
 			"/css/**",
 			"/js/**",
@@ -30,8 +28,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			"/common/**",
 			"/bootstrap/**",
 			"/user/**",
-
-
 	};
 
 	@Autowired
@@ -48,7 +44,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	private String rolesQuery;
 
 	protected void configure(HttpSecurity http) throws Exception{
-
 
 		http.
 				authorizeRequests()

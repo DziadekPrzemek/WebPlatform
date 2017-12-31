@@ -1,33 +1,16 @@
 $(document).ready(function() {
 
-    $(function() {
-        var dialog, form,
+    $(function () {
+        $("#datetimepicker1").datetimepicker({
+            format: 'YYYY-MM-DDTHH:mm:ss'
 
-            tips = $( ".validateTips" );
+        });
+    });
+    $(function () {
+        $("#datetimepicker2").datetimepicker({
+            format: 'YYYY-MM-DDTHH:mm:ss'});});
 
-        function validateDateRange(start, end) {
 
-            if(!start.isValid()) {
-                alert("Start date is invalid");
-                return false;
-            }
-
-            if(!end.isValid()) {
-                alert("End date is invalid");
-                return false;
-            }
-
-            if(start.isAfter(end)) {
-                alert("End date must be after start date");
-                return false;
-            }
-
-            if(start.isSame(end)) {
-                alert("End date must be after start date");
-                return false;
-            }
-            return true;
-        }});
     $('#calendar').fullCalendar({
         editable: true,
         eventLimit: true, // allow "more" link when too many events

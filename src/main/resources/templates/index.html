@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head th:replace="common/header :: common-header"></head>
 <div th:replace="common/navbar :: common-navbar"></div>
+
 <body>
 <div id='jumbotrone-wrapper' style="background-image: url('/images/index/background.jpg'); background-size: 100%;">
     <div className="jumbotron jumbotron-top jumbotron-fluid">
@@ -41,6 +42,7 @@
         </div>
     </div>
 </div>
+<link type="text/css" th:href="@{/css/homepage.css}" rel="stylesheet" media="screen"/>
 <div th:replace="common/cookies :: common-cookies"></div>
 <div th:replace="common/footer :: common-footer"></div>
 <div th:replace="common/header :: before-body-scripts"></div>

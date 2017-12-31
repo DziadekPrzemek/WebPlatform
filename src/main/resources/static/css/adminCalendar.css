@@ -1,0 +1,18 @@
+label, input { display:block; }
+input.text { margin-bottom:12px; width:60%; padding: .4em; }
+#calendar{
+    width: 90%!important;
+    margin-left: 5%!important;
+    min-height: 700px!important;
+}
+.eventOption{
+    font-weight: bold;
+}
+.tab-pane{
+    min-height: 700px!important;
+}
+
+.modal-content{
+    width: 90%!important;
+    margin-left: 5%!important;
+}
