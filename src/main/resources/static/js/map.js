@@ -8,40 +8,48 @@ function initMap() {
 
 
     var markers = [
+
         {
             coords: {lat: 52.25, lng: 21.02},
             content:'<h1>Warszawa Bielany</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/bielany.png'>"
         },
         {
             coords:{lat: 50.28, lng: 19.10},
             content:'<h1>Sosnowiec</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/sosnowiec.png'>"
         },
         {
             coords:{lat: 53.36, lng: 17.04},
             content:'<h1>Złotów</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/zlotow.png'>"
         },
         {
             coords:{lat: 51.24, lng: 22.56},
             content:'<h1>Lublin</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/lublin.jpg'>"
         },
         {
             coords:{lat: 52.40, lng: 16.92},
             content:'<h1>Poznań</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/poznan.png'>"
         },
         {
             coords:{lat: 51.89, lng: 15.40},
             content:'<h1>Świdnica</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/swidnica.jpg'>"
         },
         {
             coords:{lat: 51.65, lng: 19.35},
             content:'<h1>Pabianice</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/pabianice.png'>"
         },
         {
             coords:{lat: 52.07, lng: 21.25},
@@ -52,48 +60,58 @@ function initMap() {
         {
             coords:{lat: 52.33, lng: 21.19},
             content:'<h1>Kobyłka</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/kobylka.jpg'>"
         },
         {
             coords:{lat: 50.88, lng: 20.42},
             content:'<h1>Piekoszów</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/piekoszow.jpg'>"
         },
         {
             coords:{lat: 50.34, lng: 18.91},
             content:'<h1>Bytom</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/bytom.png'>"
         },
         {
             coords:{lat: 51.33, lng: 16.64},
             content:'<h1>Wołów</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/wolow.jpg'>"
         },
         {
             coords:{lat: 50.25, lng: 18.85},
             content:'<h1>Ruda Śląska </h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/rudasl.jpg'>"
         },
         {
             coords:{lat: 52.54, lng: 19.70},
             content:'<h1>Płock</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/plock.jpg'>"
         },
         {
             coords:{lat: 50.97, lng: 18.21},
             content:'<h1>Kluczbork</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/kluczbork.jpg'>"
         },
         {
             coords:{lat: 50.39, lng: 18.90},
             content:'<h1>Radzionków</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/radzionkow.png'>"
         },
         {
             coords:{lat: 49.61, lng: 20.71},
             content:'<h1>Nowy Sącz</h1>',
-            iconImage: "/images/location.ico"
+            iconImage: "/images/location.ico",
+            content: "<img src = '/images/map/nowysacz.JPG'>"
         },
+
     ];
 
     for(var i = 0; i < markers.length;i++){
@@ -108,7 +126,7 @@ function initMap() {
         });
         // Check for customicon
         if(props.iconImage){
-            // Set icon image
+            // Set icon images
             marker.setIcon(props.iconImage);
         }
         // Check content

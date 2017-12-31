@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<head th:replace="common/header :: common-header"/>
-<div th:replace="common/navbar :: common-navbar"/>
-
+<head th:replace="common/header :: common-header"></head>
+<div th:replace="common/navbar :: common-navbar"></div>
 
 <body>
-<div id='jumbotrone-wrapper'>
+<div id='jumbotrone-wrapper' style="background-image: url('/images/index/background.jpg'); background-size: 100%;">
     <div className="jumbotron jumbotron-top jumbotron-fluid">
         <div className="container">
             <div className="row">
@@ -15,7 +14,7 @@
                 </div>
             </div>
             <div className="row">
-                <div id='jumbo-siemens-frame-small' className='col-xs-11 col-md-9 col-lg-7' th:text="#{index.our.name}">
+                <div id='jumbo-siemens-frame-small' class='col-xs-11 col-md-9 col-lg-7' th:text="#{index.our.name}">
 
                 </div>
             </div>
@@ -25,44 +24,27 @@
 <div id="systems-wrapper">
     <div class="container">
         <div id="systems-info">
-            <h3 class="header section" th:text="#{index.system.chooser}"/>
+            <h3 class="header section" th:text="#{index.system.chooser}"></h3>
             <div class="systems">
                 <div class="system">
                     <a  th:href="#{url.navigator}"> <img class="system-img" th:src="#{index.system.one.image}"/></a>
-
                     </div>
                 <div class="system">
                     <a  th:href="#{url.cwp}">  <img class="system-img" th:src="#{index.system.two.image}"/></a>
-
                     </div>
                 <div class="system">
                     <a th:href="#{url.osticket}"><img class="system-img" th:src="#{index.system.three.image}"/></a>
-
                     </div>
                 <div class="system">
                     <a href="/login"><img class="system-img" th:src="#{index.system.four.image}"/></a>
                      </div>
             </div>
         </div>
-
-    </div>
-
-</div>
-<div id="processes-wrapper">
-    <div class="container">
-        <div id="processes-info">
-
-            <div class="process">
-                <img class="process-img" th:src="#{map.process.img}"/>
-            </div>
-        </div>
     </div>
 </div>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<div th:replace="common/footer :: common-footer"/>
-<div th:replace="common/header :: before-body-scripts"/>
+<link type="text/css" th:href="@{/css/homepage.css}" rel="stylesheet" media="screen"/>
+<div th:replace="common/cookies :: common-cookies"></div>
+<div th:replace="common/footer :: common-footer"></div>
+<div th:replace="common/header :: before-body-scripts"></div>
 </body>
 </html>

@@ -3,21 +3,14 @@
 <head th:fragment="common-header">
     <meta charset="utf-8"/>
     <meta name="authors" content="Przemek Dziadek and Kamil Jozwik"/>
-    <title th:text="#{header.title}"/>
+    <title th:text="#{header.title}"></title>
     <link rel="icon" th:href="#{header.favicon}" />
-    <!-- Bootstrap core CSS -->
-    <link th:href="@{webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
-          rel="stylesheet" media="screen"/>
-
-    <!-- Custom styles for this template -->
+    <link th:href="@{webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
     <link type="text/css" th:href="@{/css/styles.css}" rel="stylesheet" media="screen"/>
     <div th:fragment="before-body-scripts">
         <script th:src="@{/webjars/jquery/2.2.4/dist/jquery.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
         <script th:src="@{/webjars/jquery-ui/1.11.2/jquery-ui.min.js}"></script>
-
     </div>
-
 </head>
-
 </html>

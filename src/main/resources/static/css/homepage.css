@@ -1,0 +1,63 @@
+.jumbotron{
+    min-height: 500px;
+    position: relative;
+}
+#jumbotrone-wrapper {
+    min-height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+#jumbo-siemens-frame-big {
+    width: 400px;
+    height: 110px;
+    text-align: center;
+    color: white;
+    font-size: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
+    background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    margin-top: 40px;
+    margin-left: 63%;
+}
+#jumbo-siemens-frame-big a{
+    color: white;
+}
+#jumbo-siemens-frame-small {
+    width: 400px;
+    line-height: 60px;
+    margin-top: 5px;
+    margin-left: 63%;
+    background: -webkit-gradient(linear,left top, right top,color-stop(0, #50bebe),color-stop(50%, #41aaaa),to(#0099cb));
+    background: -webkit-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: -o-linear-gradient(left,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    background: linear-gradient(to right,#50bebe 0,#41aaaa 50%,#0099cb 100%);
+    text-align: center;
+    font-size: 27px;
+    color: white;
+}
+#systems-wrapper{
+    padding-top: 38%;
+}
+
+#systems-info h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight:  bold;
+    color: black;
+}
+.systems {
+    display: flex;
+    justify-content: space-around;
+}
+
+.system-img {
+    max-width: 150px;
+    max-height: 100%;
+}

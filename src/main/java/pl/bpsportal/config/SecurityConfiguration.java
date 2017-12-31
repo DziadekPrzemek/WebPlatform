@@ -14,8 +14,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
-
-	private static final String[] PUBLIC_MATCHERS={
+	private static final String[] PUBLIC_MATCHERS = {
 			"/webjars/**",
 			"/css/**",
 			"/js/**",
@@ -28,29 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			"/registration/**",
 			"/common/**",
 			"/bootstrap/**",
-
-
-
-	};
-	private static final String[] ADMIN_MATCHERS={
-			"/webjars/**",
-			"/css/**",
-			"/js/**",
-			"/images/**",
-			"/",
-			"/about/**",
-			"/contact/**",
-			"/error/**/*",
-			"/map/**",
-			"/registration/**",
-			"/common/**",
-			"/bootstrap/**",
-			"/admin/**",
-			"/calendar/**",
-
-
-
-
+			"/user/**",
 	};
 
 	@Autowired
@@ -68,17 +45,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	protected void configure(HttpSecurity http) throws Exception{
 
-
 		http.
 				authorizeRequests()
 				.antMatchers(PUBLIC_MATCHERS).permitAll()
-				.antMatchers("/login").permitAll()
 				.antMatchers("/panel").hasAuthority("ADMIN")
 				.antMatchers("/calendar").hasAnyAuthority("USER","ADMIN")
 				.anyRequest()
 				.authenticated().and().csrf().disable()
 				.formLogin().defaultSuccessUrl("/calendar")
-
 				.loginPage("/login").failureUrl("/login?error").permitAll()
 				.and()
 				.logout().permitAll();
@@ -94,7 +68,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				.dataSource(dataSource)
 				.passwordEncoder(bCryptPasswordEncoder);
 	}
-
-
-
 }

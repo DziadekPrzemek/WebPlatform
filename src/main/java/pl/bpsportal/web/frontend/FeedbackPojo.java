@@ -41,12 +41,8 @@ public class FeedbackPojo implements Serializable {
 		sb.append('}');
 		return sb.toString();
 	}
-
 	private String name;
 	private String email;
 	private String feedback;
 	private String phone;
-
-
-
 }

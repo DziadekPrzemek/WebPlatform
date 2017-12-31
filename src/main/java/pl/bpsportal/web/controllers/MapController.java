@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class mapController {
+public class MapController {
 	@RequestMapping("/map")
 	public String mapController(){
 		return "map/map";
