@@ -6,7 +6,7 @@ App is based on AWS services (Elastic Beanstalk with Apache Tomcat + Amazon RDS)
 
 Stack:
 
-HTML, CSS, Java, Spring Security, Spring Boot, Hibernate and Full Calendar Plugin
+HTML, CSS, Java, Spring Security, Spring Boot, Hibernate and Full Calendar Plugin (JS).
 
 Build:
 
